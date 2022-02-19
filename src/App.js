@@ -1,11 +1,14 @@
 import './App.css';
 import Header from './components/Header';
+import Feedbackitem from './components/Feedbackitem';
 
 function App() {
   return (
     <>
       <Header/>
-      <h1>Hello World</h1>
+      <div className='container'>
+        <Feedbackitem/>
+      </div>
     </>
   );
 }
