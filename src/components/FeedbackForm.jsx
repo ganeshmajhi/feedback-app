@@ -4,7 +4,7 @@ import Card from "./shared/Card"
 import Button from "./shared/Button"
 import FeedbackContext from "../context/FeedbackContext"
 function FeedbackForm() {
-    const {addFeedback, editFeedback} = useContext(FeedbackContext)
+    const {addFeedback, editFeedback, updateFeedback} = useContext(FeedbackContext)
     useEffect(()=>{
         if(editFeedback.edit === true){
             setBtnDisabled(false)
@@ -36,7 +36,11 @@ function FeedbackForm() {
                 text,
                 rating
             }
-            addFeedback(newFeedback);
+            if(editFeedback.edit === true){
+                updateFeedback(editFeedback.item.id, newFeedback)
+            }else{
+            addFeedback(newFeedback)
+            }
 
             setText('')
         }
