@@ -12,3 +12,10 @@
 - useEffect
 - createContext
 - useContext
+
+# Instruction to download this project and run in local server.
+- Clone the project or download the zip file.
+- go to the project folder `cd project-name`
+- `npm install`
+- then run the server by `npm run dev`
+- get the project served in localhost:3000 and json-server in localhost:5000
